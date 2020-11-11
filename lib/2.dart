@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'main.dart';
+
 
 class SecondScreen extends StatelessWidget {
   @override
@@ -9,15 +11,18 @@ class SecondScreen extends StatelessWidget {
           title: Text('Илья production'),
           backgroundColor: Colors.black,
         ),
-        body:
-        Column(
-
+        body: Column(
           children: <Widget>[
             Image.network('https://img11.postila.ru/data/f0/70/3a/2e/f0703a2e49c4025e608a9ac40b8e57129606cf42a08d48b4578ac02e4ef2c56d.jpg'),
+
             Text('Без труда не вытащить рыбку из пруда',
               style: TextStyle( // а у текста появился виджет, который его стилизует
-                  fontSize : 31, color: Colors.red),)
-          ],
+                  fontSize : 31, color: Colors.red),),
+            RaisedButton(onPressed: () { Navigator.of(context).pop(
+                MaterialPageRoute(builder: (context) => MainScreen()
+                ));},
+
+            )],
         ),
         backgroundColor: Colors.black
 
